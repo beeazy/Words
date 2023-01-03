@@ -24,8 +24,8 @@ class WordListFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let { lId ->
-            letterId = lId.getString(LETTER).toString()
+        arguments?.let {
+            letterId = it.getString(LETTER).toString()
         }
     }
 
@@ -53,6 +53,5 @@ class WordListFragment : Fragment() {
             DividerItemDecoration(this.requireContext(), DividerItemDecoration.VERTICAL)
         )
 
-        activity?.title = "Words that start with $letterId"
     }
 }
